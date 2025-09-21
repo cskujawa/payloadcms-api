@@ -1,0 +1,4 @@
+# PayloadCMS Content Generator Tool Authentication
+PAYLOADCMS_TOOL_EMAIL="demo-author@example.com"
+PAYLOADCMS_TOOL_PASSWORD="password"
+PAYLOADCMS_TOOL_PORT=3001

@@ -56,7 +56,7 @@ networks:
   
   proxy-payloadcms-to-your-n8n-network:
     external: true
-    name: smart-tilde
+    name: your-n8n-network
 
 volumes:
   payloadcms_db_data:

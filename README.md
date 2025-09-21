@@ -6,7 +6,7 @@ A Docker-based PayloadCMS v3 application enhanced with an intelligent content ge
 
 This project serves as a complete PayloadCMS solution designed for integration into any Docker Compose stack. It provides a full-stack CMS including backend API, frontend interface, and intelligent content generation capabilities through n8n workflow automation.
 
-**Modular Design**: This system can be easily plugged into existing Docker Compose environments, providing instant CMS capabilities without disrupting your current infrastructure. The internal Docker networking ensures seamless integration with other services in your stack.
+**Modular Design**: This system can be easily plugged into existing Docker Compose environments, providing instant CMS capabilities without disrupting your current infrastructure. The internal Docker networking ensures seamless integration with other services in your stack. Just change `proxy-payloadcms-to-your-n8n-network` in the docker-compose file to the docker network with your n8n instance.
 
 ## Architecture
 

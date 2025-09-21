@@ -105,7 +105,7 @@ This cleanup process resets everything to a pristine state, removing all demo da
 ⚠️ **IMPORTANT**: The content generation API requires a seeded database to function properly. Demo content provides the media assets, categories, and user accounts needed for automated post creation.
 
 ### System Prompt
-The AI uses a comprehensive system prompt (`./data/payloadcms/tools/payloadcms-content-generator/system-prompt.md`) that:
+The LLM node (Ollama in my n8n workflow) needs a comprehensive system prompt [./data/payloadcms/tools/payloadcms-content-generator/system-prompt.md](https://github.com/cskujawa/payloadcms-api/blob/main/data/payloadcms/tools/payloadcms-content-generator/system-prompt.md) that:
 - **Structures AI Output**: Guides language models to generate consistent JSON format
 - **Defines Content Hierarchy**: Ensures proper use of headings, paragraphs, and specialized blocks
 - **SEO Integration**: Prompts for optimized meta titles and descriptions
@@ -115,7 +115,7 @@ The AI uses a comprehensive system prompt (`./data/payloadcms/tools/payloadcms-c
 The system prompt acts as a contract between your n8n workflow and the content generator, ensuring predictable, well-formatted output regardless of the AI service used (Ollama, OpenAI, etc.).
 
 ### Python Parser
-The n8n Python parser (`./data/payloadcms/tools/payloadcms-content-generator/python-parser.py`) serves as the critical bridge between AI output and PayloadCMS:
+The n8n Python parser [./data/payloadcms/tools/payloadcms-content-generator/python-parser.py](https://github.com/cskujawa/payloadcms-api/blob/main/data/payloadcms/tools/payloadcms-content-generator/python-parser.py) serves as the critical bridge between LLM output and PayloadCMS:
 
 - **Data Validation**: Ensures AI-generated JSON matches PayloadCMS schema requirements
 - **Error Recovery**: Handles malformed AI output gracefully with fallback formatting

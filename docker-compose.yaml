@@ -7,7 +7,7 @@ services:
     restart: unless-stopped
     networks:
       - payloadcms
-      - proxy-payloadcms-to-smart-tilde
+      - proxy-payloadcms-to-your-n8n-network
     ports:
       - "${PAYLOADCMS_HOST_PORT}:3000"
     volumes:
@@ -54,7 +54,7 @@ networks:
   payloadcms:
     name: payloadcms
   
-  proxy-payloadcms-to-smart-tilde:
+  proxy-payloadcms-to-your-n8n-network:
     external: true
     name: smart-tilde
 

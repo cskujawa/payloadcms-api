@@ -40,12 +40,16 @@ This project serves as a complete PayloadCMS solution designed for integration i
 
 ## Quick Start
 
+Look, I aim to make the tech I work with accessible, and I know the burdens of project clutter all to well. That's why I designed this project with scripts for setting up and managing the project. 
+
 ### Initial Setup
 
 ```bash
 # Run the automated setup
 ./scripts/setup.sh
 ```
+
+![Setup Script](./img/Setup_Script.png)
 
 ### Monitor Startup Process
 
@@ -57,9 +61,11 @@ docker compose logs -f payloadcms-app
 ```
 
 Wait for these key messages:
-- `🚀 Starting PayloadCMS development server...`
-- `✅ Content generator API server is healthy`
-- `🔌 Ready for n8n integration!`
+- ` ✓ Starting...`
+- ` ✓ Ready in 1321ms`
+
+When you first access some pages they may take some time to compile, you will see that in the logs
+- ` ○ Compiling /admin/[[...segments]] ...`
 
 ### Access and Configuration
 
